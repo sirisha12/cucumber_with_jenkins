@@ -17,7 +17,7 @@ public class Testapp {
 	public void user_navigating_to_Test_Triangle_App() throws Throwable {
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.get("http://localhost/sirisha/index.html");
+		driver.get("http://localhost/sirisha/");
 	}
 
 	@When("^user tick on the check Box$")
@@ -38,9 +38,9 @@ public class Testapp {
 
 	@Then("^user enters all the details in signup page$")
 	public void user_enters_all_the_details_in_signup_page() throws Throwable {
-		driver.findElement(By.id("forenames")).sendKeys("anusha");
+		driver.findElement(By.id("forenames")).sendKeys("sirisha");
  		Thread.sleep(1000);
-		driver.findElement(By.id("surename")).sendKeys("sandra");
+		driver.findElement(By.id("surename")).sendKeys("nalam");
 		Thread.sleep(1000);
 		driver.findElement(By.id("radiof")).click();
 		Thread.sleep(1000);
@@ -105,7 +105,7 @@ public class Testapp {
 	public void user_provide_all_the_details_in_payment_page() throws Throwable {
 	  
 		    driver.findElement(By.id("ccnum")).sendKeys("5765443333");
-		    driver.findElement(By.id("ccname")).sendKeys("anusha");
+		    driver.findElement(By.id("ccname")).sendKeys("sirisha");
 			Select sel4=new Select(driver.findElement(By.id("ccmonth")));
 		    sel4.selectByVisibleText("March");
 		    Select sel5=new Select(driver.findElement(By.id("ccyear")));
